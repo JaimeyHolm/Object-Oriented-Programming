@@ -1,0 +1,50 @@
+#include <iostream>
+#include "meubels.hpp"
+
+void furniture::makeMoreHipster(){
+	stool1.makeStoolMoreHipster();
+	stool2.makeStoolMoreHipster();
+	stool3.makeStoolMoreHipster();
+	stool4.makeStoolMoreHipster();
+	table1.makeTableMoreHipster();
+}
+
+void stool::makeStoolMoreHipster(){
+	n_legs -= 1;
+}
+
+void table::makeTableMoreHipster(){
+	n_legs += 4;
+}
+
+void furniture::print_furniture(){
+	stool1.print_stool();
+	stool2.print_stool();
+	stool3.print_stool();
+	stool4.print_stool();
+	table1.print_table();
+}
+
+void stool::print_stool(){
+	std::cout << "Stool: " << n_legs << ", " << n_seats << "\n";
+}
+
+void table::print_table(){
+	std::cout << "Table: " << n_legs << ", " << length << ", " << width << "\n";
+}
+
+//
+//void furniture::print(){
+//	print_();
+//	print_author();
+//	print_text();
+//}
+//
+//void stool::print_n_legs(){
+//	std::cout << text << "\n";
+//}
+//
+//void book::print_n_seats(){
+//	std::cout << title << "\n";
+//}
+
