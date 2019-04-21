@@ -1,0 +1,7 @@
+#include <iostream>
+#include "book.hpp"
+
+int main(){
+	book test("Test", "Schrijver", "Testje");
+	test.print();
+}
