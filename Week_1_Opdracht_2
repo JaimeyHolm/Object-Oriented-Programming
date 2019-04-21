@@ -1,0 +1,5 @@
+// 1. Hij geeft de variabelen een waarde.
+// 2. Declaratie
+// 3. book en print
+// 4. Zodat de gegevens van een boek niet aangepast kunnen worden door de gebruiker.
+// 5. Omdat book een klasse is die bestaat uit meerdere variabelen.
