@@ -1,0 +1,11 @@
+#include <iostream>
+#include "meubels.hpp"
+
+int main(){
+	furniture furniture1;
+	std::cout << "Old furniture: \n";
+	furniture1.print_furniture();
+	std::cout << "New furniture: \n";
+	furniture1.makeMoreHipster();
+	furniture1.print_furniture();
+}
