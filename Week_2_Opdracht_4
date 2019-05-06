@@ -1,0 +1,161 @@
+Week 2 Opdracht 4
+
+
+Vector + Vector
+Main:
+#include <iostream>
+#include "Test.hpp"
+using namespace std;
+
+int main(){
+    Vector vec1(4, 2);
+    Vector vec2(2, 2);
+    Vector result;
+    result = vec1 + vec2;
+    
+    cout << "Het resultaat is (" << result.x << "," << result.y << ")\n";
+    int x = 2, y = 3;
+    int z = x + y;
+    return 0;
+}
+
+Hpp:
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Vector {
+    public:
+    int x, y;
+    Vector() {};
+    Vector (int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+    Vector operator+(const Vector&);
+    
+};
+Vector Vector::operator+(const Vector& parameter){
+    Vector temp;
+    temp.x = x + parameter.x;
+    temp.y = y + parameter.y;
+    return temp;
+}
+
+
+Vector += Vector
+Main:
+#include <iostream>
+#include "Test.hpp"
+using namespace std;
+
+int main(){
+    Vector vec1(4, 2);
+    Vector vec2(2, 2);
+    vec1 += vec2;
+    
+    cout << "Het resultaat is (" << vec1.x << "," << vec1.y << ")\n";
+}
+
+Hpp:
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Vector {
+    public:
+    int x, y;
+    Vector() {};
+    Vector (int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+    Vector operator+=(const Vector&);
+    
+};
+Vector Vector::operator+=(const Vector& parameter){
+    x = x + parameter.x;
+    y = y + parameter.y;
+    return Vector(x, y);
+}
+
+
+Vector * Vector (Moet Vector * Int worden)
+Main:
+#include <iostream>
+#include "Test.hpp"
+using namespace std;
+
+int main(){
+    Vector vec1(4, 2);
+    Vector vec2(2, 2);
+    Vector result;
+    result = vec1 * vec2;
+    
+    cout << "Het resultaat is (" << result.x << "," << result.y << ")\n";
+}
+
+Hpp:
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Vector {
+    public:
+    int x, y;
+    Vector() {};
+    Vector (int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+    Vector operator*(const Vector&);
+    
+};
+Vector Vector::operator*(const Vector& parameter){
+    Vector temp;
+    int z;
+    temp.x = x * parameter.x;
+    temp.y = y * parameter.y;
+    return temp;
+}
+
+
+Vector * Vector (Moet Vector * Int worden)
+Main:
+#include <iostream>
+#include "Test.hpp"
+using namespace std;
+
+int main(){
+    Vector vec1(4, 2);
+    Vector vec2(2, 2);
+    vec1 *= vec2;
+    
+    cout << "Het resultaat is (" << vec1.x << "," << vec1.y << ")\n";
+}
+
+Hpp:
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Vector {
+    public:
+    int x, y;
+    Vector() {};
+    Vector (int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+    Vector operator*=(const Vector&);
+    
+};
+Vector Vector::operator*=(const Vector& parameter){
+    x = x * parameter.x;
+    y = y * parameter.y;
+    return Vector(x, y);
+}
